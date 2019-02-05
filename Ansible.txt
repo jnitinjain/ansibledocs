@@ -1,0 +1,82 @@
+jnitn_jain@ansiblemaster:~$ sudo apt-cache search ansible
+ansible - Configuration management, deployment, and task execution system
+ansible-doc - Ansible documentation and examples
+ansible-fireball - Ansible fireball transport support
+ansible-node-fireball - Ansible fireball transport support for nodes
+python-reclass - hierarchical inventory backend for configuration management systems
+reclass - hierarchical inventory backend for configuration management systems
+jnitn_jain@ansiblemaster:~$  sudo apt-get update
+
+jnitn_jain@ansiblemaster:~$ sudo su -
+
+root@ansiblemaster:~# apt-get install ansible
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following extra packages will be installed:
+  libgmp10 python-crypto python-httplib2 python-jinja2 python-markupsafe
+Suggested packages:
+  ansible-doc sshpass python-crypto-dbg python-crypto-doc python-jinja2-doc
+The following NEW packages will be installed:
+  ansible libgmp10 python-crypto python-httplib2 python-jinja2
+  python-markupsafe
+0 upgraded, 6 newly installed, 0 to remove and 5 not upgraded.
+Need to get 1,086 kB of archives.
+After this operation, 5,961 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 
+
+root@ansiblemaster:~# apt-add-repository ppa:ansible/ansible
+ Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy. Avoid writing scripts or custom code to deploy and update your applications— automate in a language that approaches plain English, using SSH, with no agents to install on remote systems.
+
+http://ansible.com/
+ More info: https://launchpad.net/~ansible/+archive/ubuntu/ansible
+Press [ENTER] to continue or ctrl-c to cancel adding it
+
+gpg: keyring `/tmp/tmpfca9a2io/secring.gpg' created
+gpg: keyring `/tmp/tmpfca9a2io/pubring.gpg' created
+gpg: requesting key 7BB9C367 from hkp server keyserver.ubuntu.com
+gpg: /tmp/tmpfca9a2io/trustdb.gpg: trustdb created
+gpg: key 7BB9C367: public key "Launchpad PPA for Ansible, Inc." imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+OK
+root@ansiblemaster:~#
+
+Before installing ansible package add ansible repository to your system
+Syntax: sudo apt-add-repository ppa:ansible/ansible
+Module 9: Configuration Management with Ansible www.edureka.co/devops
+? Run the update command before installing to update existing packages
+Syntax: sudo apt-get update
+? Now install the ansible package
+Syntax: sudo apt-get install ansible
+
+root@ansiblemaster:~# cd .ssh/
+root@ansiblemaster:~/.ssh# ssh .keygen
+ssh: Could not resolve hostname .keygen: Name or service not known
+root@ansiblemaster:~/.ssh# ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+3a:c3:a0:9e:8e:26:c9:d7:c0:f6:92:22:23:32:31:be root@ansiblemaster
+The key's randomart image is:
++--[ RSA 2048]----+
+|                 |
+|                 |
+|                 |
+|                 |
+|  . .   S        |
+|o  = o .         |
+|o+o = =          |
+|OB = o o         |
+|BEB .            |
++-----------------+
+root@ansiblemaster:~/.ssh# ls
+authorized_keys  id_rsa  id_rsa.pub
+root@ansiblemaster:~/.ssh# 
+
+

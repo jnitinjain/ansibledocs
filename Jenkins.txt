@@ -1,0 +1,18 @@
+Installation --- Java before in ubuntu
+
+java -version
+
+Step 2: If its not showing java version installed then you have to download it for your machine.
+Use below commands for that.
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install default-jdk
+installing jenkins
+
+wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+
+
+

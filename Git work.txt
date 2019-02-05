@@ -1,0 +1,138 @@
+Hi this is 1 file
+~                                                                                                                  
+Hi this is 1 file
+jnitn_jain@devops-git:~/sample$ git remote add origin https://github.com/jnitinjain/devopremorepo.git
+jnitn_jain@devops-git:~/sample$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../.bash_logout
+        ../.bashrc
+        ../.cache/
+        ../.profile
+
+nothing added to commit but untracked files present (use "git add" to track)
+jnitn_jain@devops-git:~/sample$ vim dummy 1.txt
+2 files to edit
+jnitn_jain@devops-git:~/sample$ ls
+dummy
+jnitn_jain@devops-git:~/sample$ ls -la
+total 12
+drwxrwxr-x 2 jnitn_jain jnitn_jain 4096 Feb  4 07:02 .
+drwxr-xr-x 6 jnitn_jain jnitn_jain 4096 Feb  4 07:02 ..
+-rw-rw-r-- 1 jnitn_jain jnitn_jain   18 Feb  4 07:02 dummy
+jnitn_jain@devops-git:~/sample$ git commit -m "first commit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <jnitn_jain@devops-git.asia-south1-c.c.quiet-grail-230706.internal>) not allowed
+jnitn_jain@devops-git:~/sample$ git config --global user.email "jnitin.jain5gmail.com"
+jnitn_jain@devops-git:~/sample$ git config --global user.name "Nitin"
+jnitn_jain@devops-git:~/sample$ git commit -m "first commit"
+On branch master
+
+Initial commit
+
+Untracked files:
+        ../.bash_logout
+        ../.bashrc
+        ../.cache/
+        ../.gitconfig
+        ../.profile
+        ../.viminfo
+        ./
+
+nothing added to commit but untracked files present
+jnitn_jain@devops-git:~/sample$ ls
+dummy
+jnitn_jain@devops-git:~/sample$ git add dummy
+jnitn_jain@devops-git:~/sample$ git commit -m "first commit"
+[master (root-commit) eb4e7c3] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sample/dummy
+jnitn_jain@devops-git:~/sample$ git remote add origin https://github.com/jnitinjain/devopremorepo.git
+fatal: remote origin already exists.
+jnitn_jain@devops-git:~/sample$ git push -u origin master
+Username for 'https://github.com': jnitin.jain5@gmail.com
+Password for 'https://jnitin.jain5@gmail.com@github.com': 
+Counting objects: 4, done.
+Writing objects: 100% (4/4), 264 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/jnitinjain/devopremorepo.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+jnitn_jain@devops-git:~/sample$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../.bash_logout
+        ../.bashrc
+        ../.cache/
+        ../.gitconfig
+        ../.profile
+        ../.viminfo
+
+nothing added to commit but untracked files present (use "git add" to track)
+jnitn_jain@devops-git:~/sample$ git log
+commit eb4e7c372e0247e2547e077995afa0ec00fe6a2d
+Author: Nitin <jnitin.jain5gmail.com>
+Date:   Mon Feb 4 07:07:02 2019 +0000
+
+    first commit
+jnitn_jain@devops-git:~/sample$ git pull origin master
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/jnitinjain/devopremorepo
+ * branch            master     -> FETCH_HEAD
+   eb4e7c3..6a1f36d  master     -> origin/master
+Updating eb4e7c3..6a1f36d
+Fast-forward
+ guifile | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 guifile
+jnitn_jain@devops-git:~/sample$ ls
+dummy
+jnitn_jain@devops-git:~/sample$ ls -la
+total 12
+drwxrwxr-x 2 jnitn_jain jnitn_jain 4096 Feb  4 07:02 .
+drwxr-xr-x 6 jnitn_jain jnitn_jain 4096 Feb  4 07:12 ..
+-rw-rw-r-- 1 jnitn_jain jnitn_jain   18 Feb  4 07:02 dummy
+jnitn_jain@devops-git:~/sample$ cd..
+cd..: command not found
+jnitn_jain@devops-git:~/sample$ ls
+dummy
+jnitn_jain@devops-git:~/sample$ cd
+jnitn_jain@devops-git:~$ lsd
+No command 'lsd' found, but there are 17 similar ones
+lsd: command not found
+jnitn_jain@devops-git:~$ ls
+guifile  sample
+jnitn_jain@devops-git:~$ 
+
+
+
+
+
+
+
+
+
+
+

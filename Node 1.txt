@@ -1,0 +1,6 @@
+vim  /etc/ssh/sshd_config
+
+service ssh restart
+set root login to yes
+
+pasword authentication to yes as well

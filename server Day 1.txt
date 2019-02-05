@@ -1,0 +1,98 @@
+private key 
+public key
+
+/. ssh $ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+press Enter
+press Enter
+press Enter
+
+/*/-
+*-*-*-*-
+-/**-*
+bnkjbnfvkjfbegkjgk**-*-*
+
+
+key will be generated .
+
+to find os --->uname -a
+
+way to go into ssh folder -- cd /home/name/ .ssh/
+$ls -al
+
+u will see id_rsa , id-rsa.pub and known_hosts
+
+$cat id_rsa ----private key and same for public key
+
+$ git - demo is his google cloud server.
+
+$ ls
+u will see id_rsa , id-rsa.pub and known_hosts
+
+$ adduser tcs 
+
+to install git
+
+
+apt-get install git
+
+apt-get install -y git
+
+git init
+
+git config  -- global user.name  "Nitin"
+
+git config  -- global user.email "jnitin.jain5@gmail.com'
+
+
+
+vim .gitignore--- to ignore the tracking from git
+enter filename s that you dont want git to track
+
+
+
+git add 
+
+git commit -m "Comments"
+
+git tag 
+git tag --a v2.0 copy the key committed code -m "Created tag"
+
+git show
+
+Interacting wd remote repo
+
+git remote add origin https://github.com/jnitinjain/devopremorepo.git
+git status
+
+git push -u origin master 
+
+or
+git push  origin master
+
+git pull
+
+
+
+git branch -- shows the current branch
+
+git checkout feature or master(branches  name) switches to branch u want to addd file or view file
+
+git checkourt -b feature [creating a branch feature]
+
+git merge feature or whatever name
+
+
+install kdiff3 tool
+
+git config -gloal mergetoll kdiff3-- search for this command
+
+git mergetool
+
+cat file2.orig--- where .orig stands for original which contains in order to revert back the changes
+
+
+
+
+
+
